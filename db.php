@@ -1,7 +1,7 @@
 <?php
-// db.php - Database Connection
+// db.php — PDO Database Connection
 $host = 'localhost';
-$db   = 'student_db';
+$db   = 'events_db';
 $user = 'root';
 $pass = '';
 
@@ -10,5 +10,5 @@ try {
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 } catch (PDOException $e) {
-    die("Connection failed: " . $e->getMessage());
+    die("Database connection failed: " . $e->getMessage());
 }
